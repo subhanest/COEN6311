@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Styled Headings</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f4f4f4;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+            background-color: #007bff;
+            padding: 15px 20px;
+            color: white;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 60px;
+            box-shadow: 0px 4px 2px -2px gray;
+        }
+        .container {
+            max-width: 900px;
+            padding: 20px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            justify-content: center;
+        }
+        .box {
+            background: white;
+            padding: 15px;
+            width: 300px;
+            text-align: center;
+            border-radius: 5px;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        h3 {
+            text-decoration: underline;
+            font-size: 16px;
+            color: #333;
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <h1>Concordia Book App</h1>
+       
+    </div>
+    <div class="container">
+        <div class="box"><h3>"Deep Learning", year=2018, edition="4th", author="Ian Goodfellow", course_code="ML202" Condition: new </h3></div>
+        <div class="box"><h3>"Deep Learning", year=2011, edition="1st", author="Ian Goodfellow", course_code="ML202" Condition: Old</h3></div>
+        <div class="box"><h3>"Deep Learning", year=2020, edition="5th", author="Ian Goodfellow", course_code="ML202" Condition: Old</h3></div>
+        <div class="box"><h3>"Deep Learning", year=2012, edition="1st", author="Ian Goodfellow", course_code="ML202" Condition: new</h3></div>
+        <div class="box"><h3>"Deep Learning", year=2016, edition="1st", author="Ian Goodfellow", course_code="ML202" Condition: new</h3></div>
+    </div>
+</body>
+</html>

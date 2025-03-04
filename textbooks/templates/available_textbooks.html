@@ -1,0 +1,90 @@
+<!-- add_textbooks.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fowler Textbooks Service - Concordia Book App</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        .container {
+            max-width: 600px;
+            margin: 80px auto;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+        }
+        h2 {
+            text-align: center;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+        label {
+            margin-top: 10px;
+            font-weight: bold;
+        }
+        input, select {
+            padding: 10px;
+            margin-top: 5px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        button {
+            background-color: #007bff;
+            color: white;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 15px;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Add Your Textbooks</h2>
+        <form method="post">
+            {% csrf_token %}
+            <h3>Textbooks You HAVE</h3>
+            <label for="title">Title:</label>
+            <input type="text" name="title" required>
+
+            <label for="year">Year:</label>
+            <input type="number" name="year" required>
+
+            <label for="edition">Edition:</label>
+            <input type="text" name="edition">
+
+            <label for="author">Author:</label>
+            <input type="text" name="author" required>
+
+            <label for="course_code">Course Code:</label>
+            <input type="text" name="course_code" required>
+
+            <h3>Textbooks You NEED</h3>
+            <label for="needed_course_code">Course Code:</label>
+            <input type="text" name="needed_course_code" required>
+
+            <label for="condition">Preferred Condition:</label>
+            <select name="condition" required>
+                <option value="new">New</option>
+                <option value="written">Written</option>
+                <option value="old">Old</option>
+            </select>
+
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+</body>
+</html>
